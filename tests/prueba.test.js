@@ -1,12 +1,20 @@
 test("Deberia ejecutarse con exito", function () {
   //Inicializacion
   // const mensaje1 = "Hola Mundo!!!   "; // valor con espacion causaria error
-  const mensaje1 = "Hola Mundo!!!";
+  const mensajePosible = "Hola Mundo!!!";
   //Estimulo
-  const mensaje2 = mensaje1.trim();
+  const mensaje = mensajePosible.trim();
   //Observacion
-  expect(mensaje1).toBe(mensaje2);
-  // Se espera que el mensaje1(que pasamos), sea igual al valor que debe mostrarse obligatoriamente.
+  expect(mensajePosible).toBe(mensaje);
+  // Se espera que el mensaje1(que pasamos), sea igual al valor que se espera que sea.
+});
+
+test("Deberia ser el mismo numeros", () => {
+  const numeroTest = 12345; // Lo que vamos a testear
+  const numero = 12345; // lo que se debe mostrar
+
+  //Se espera que el numero a testear sea el valor esperado
+  expect(numeroTest).toBe(numero);
 });
 
 /**
