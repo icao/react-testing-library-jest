@@ -1,7 +1,7 @@
 import { retornaArreglo } from "../../src/base-pruebas/07-deses-arr";
 
 describe("Pruebas en 07-deses-arr", () => {
-  test("retornaArreglo() deberia retornar un elemento tipo string, un tipo numbero y un booleano", () => {
+  test("retornaArreglo() deberia retornar un elemento tipo string, un tipo numero y un booleano", () => {
     const [
       elementoString, elementoNumero, elementoBooleano
     ] = retornaArreglo();
