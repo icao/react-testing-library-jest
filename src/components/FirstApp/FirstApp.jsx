@@ -1,4 +1,4 @@
-import  PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 
 function FirstApp({ title, subtitle }) {
   return (
@@ -12,9 +12,12 @@ function FirstApp({ title, subtitle }) {
 }
 
 FirstApp.propTypes = {
-  title: PropTypes.string,
-  suntitle: PropTypes.string,
-}
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+};
 
+FirstApp.defaultProps = {
+  subtitle: "soy un subtitulo",
+};
 
 export default FirstApp;

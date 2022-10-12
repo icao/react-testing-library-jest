@@ -8,11 +8,11 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <FirstApp
       title="Soy una webapp hecha con react.js"
       subtitle="Soy generado con vite.js"
     />
-    <CounterApp value={0} />
+    {/* <CounterApp value={0} /> */}
   </React.StrictMode>
 );
