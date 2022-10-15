@@ -4,7 +4,7 @@ function FirstApp({ title, subtitle }) {
   return (
     <div className="app">
       <header>
-        <h1 className="title">{title}</h1>
+        <h1 className="title"> {title} </h1>
         <h2 className="subtitle">{subtitle}</h2>
       </header>
     </div>
