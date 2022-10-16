@@ -4,8 +4,8 @@ function FirstApp({ title, subtitle }) {
   return (
     <div className="app">
       <header>
-        <h1 className="title"> {title} </h1>
-        <h2 className="subtitle">{subtitle}</h2>
+        <h1 data-testid="test-title"> {title} </h1>
+        <h2 id="subtitle">{subtitle}</h2>
       </header>
     </div>
   );
