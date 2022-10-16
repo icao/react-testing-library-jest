@@ -14,10 +14,16 @@ exports[`Pruebas en <FirstApp /> Deberia hacer match con el snapshot 1`] = `
          
       </h1>
       <h2
-        id="subtitle"
+        data-testid="test-subtitle"
       >
         soy un subtitulo
       </h2>
+      <h3>
+        soy un subtitulo
+      </h3>
+      <p>
+        soy un subtitulo
+      </p>
     </header>
   </div>
 </div>

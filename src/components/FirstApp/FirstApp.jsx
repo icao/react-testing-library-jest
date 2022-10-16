@@ -5,7 +5,9 @@ function FirstApp({ title, subtitle }) {
     <div className="app">
       <header>
         <h1 data-testid="test-title"> {title} </h1>
-        <h2 id="subtitle">{subtitle}</h2>
+        <h2 data-testid="test-subtitle">{subtitle}</h2>
+        <h3>{subtitle}</h3>
+        <p>{subtitle}</p>
       </header>
     </div>
   );

@@ -38,12 +38,17 @@ describe("Pruebas en <FirstApp />", () => {
     expect(getByTestId("test-title").innerHTML).toContain(` ${title} `); // Notese que al usar toContain, sigue pasando nuestro test
   });
 
-  // test("Debe mostrar un subtitulo", () => {
-  //   const subtitle = "Soy un subtitulo";
-  //   const { container } = render(
-  //     <FirstApp title={title} subtitle={subtitle} />
-  //   );
-  // });
+  test("Debe mostrar un subtitulo", () => {
+    const subtitle = "Soy un subtitulo";
+    const { getByTestId, getAllByText } = render(
+      <FirstApp title={title} subtitle={subtitle} />
+    );
+
+    expect(getByTestId("test-subtitle").innerHTML).toBe(subtitle);
+    expect(getByTestId("test-subtitle").innerHTML).toContain(subtitle);
+
+    expect(getAllByText(subtitle).length).toBe(3); // [6] - método getAllByText
+  });
 });
 
 /**
@@ -94,23 +99,36 @@ describe("Pruebas en <FirstApp />", () => {
  *
  * En el siguiente test, despues de este, usaremos algo mas especifico. Vease acontinuación.
  *
- * 
+ *
  * ------------------------------
  * [5]- getByTestId
  * ------------------------------
- * 
+ *
  * Si bien usar JS vanilla para acceder es una alternativa, no es lo mas aconsejable para acceder al elemento para hacer nuestro test.
  * React Testing Library nos provee de una utilidad para acceder al elemento, esto es usando atributos dentro de nuestro componente.
- * 
+ *
  * El atributo [data-testid] debe ser agregado al elemento en nuestro componente, asignandole un valor custom como propiedad, ejemplo: data-testid = "title".
- * 
+ *
  * A su vez al momento de hacer nuestro tro test, podremos acceder a el elemento, usando el método getByTestId() que nos retorna el método render() donde previamente declaramos el componente.
- * 
+ *
  * getByTestId([valor_data-testid]) recibe como parametro el valor de el atributo [data-testid], y nos retorna el elemento en caso de ser encontrado.
- * 
+ *
  * Por default el atributo para anclar al elemento y poder reconocerlo con getByTest, tiene el nombre de [data-testid].
  * Este atributo puede ser tambien customizado en el archivo de configuración setup-tests.js, asignando:
  * configure({testIdAttribute: 'data-my-custom-test-attribute'})
+ *
+ *
+ * ------------------------------
+ * [6]- getAllByText()
+ * ------------------------------
+ * 
+ * El método getAllByText nos retorna todos los elementos que coincidan con un query string.
+ * 
+ * getAllByText recibe como para el elemento a buscar, por ejemplo un fragmento de texto.
+ * 
+ * Nos retorna todas las coincidencias que hacen match con el query pasado.
+ * 
+ * Es útil cuando se desea obtener multiples impresiones de un elemento, sin importar el tag en el que esta envuelto, como en el ejemplo de nuestro componente FisrtApp, donde el subtitulo es interpolado en un H2, H3 y un P.
  * 
  * 
  * */
