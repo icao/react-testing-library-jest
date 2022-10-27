@@ -52,10 +52,7 @@ describe("Pruebas en <FirstApp />", () => {
 });
 
 /**
- * ------------------------------;
- *
- * consosol
- * expect(h1.innerHTML)
+ * ------------------------------
  * [1]- render()
  * ------------------------------
  *
@@ -109,7 +106,7 @@ describe("Pruebas en <FirstApp />", () => {
  *
  * El atributo [data-testid] debe ser agregado al elemento en nuestro componente, asignandole un valor custom como propiedad, ejemplo: data-testid = "title".
  *
- * A su vez al momento de hacer nuestro tro test, podremos acceder a el elemento, usando el método getByTestId() que nos retorna el método render() donde previamente declaramos el componente.
+ * A su vez al momento de hacer nuestro| test, podremos acceder a el elemento, usando el método getByTestId() que nos retorna el método render() donde previamente declaramos el componente.
  *
  * getByTestId([valor_data-testid]) recibe como parametro el valor de el atributo [data-testid], y nos retorna el elemento en caso de ser encontrado.
  *
